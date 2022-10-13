@@ -10,14 +10,18 @@ public class LeapYear {
 			int year;
 
 			System.out.println("年を入力してください");
+
 			while(true) {
 				try {
 					year = Integer.parseInt(br.readLine());
+
 					if(year < 1) {
 						System.out.println("1以上の整数を入力してください");
 						continue;
 					}
+
 					break;
+
 				}catch(NumberFormatException e) {
 					System.out.println("正数を入力してください");
 				}
@@ -34,4 +38,3 @@ public class LeapYear {
 		}
 	}
 }
-
