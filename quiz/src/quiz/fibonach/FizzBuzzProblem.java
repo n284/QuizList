@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 public class FizzBuzzProblem {
 	/*
 	 * 自然数を入力して、1からその数字までを出力してください。
-	 * ただし、3の倍数は「Fizz」、5の倍数なら「Buzz」、15の倍数は「FizzBuzz」と表示してください。
+	 * ただし、3の倍数は「Fizz」、5の倍数なら「Buzz」、15の倍数は「FizzBuzz」と表示し、10の倍数で改行してください。
 	 * 条件
 	 * 入力値は自然数
 	 * 負の値や数字以外が入力されたら再び入力を求める
@@ -21,11 +21,12 @@ public class FizzBuzzProblem {
 		int number;
 
 		try(BufferedReader br = new BufferedReader(new InputStreamReader(System.in))){
+			System.out.println("自然数を入力してください");
 			while(true) {
-				System.out.println("自然数を入力してください");
 				try {
 					number = Integer.parseInt(br.readLine());
 					if(number < MIN) {
+						System.out.println(MIN + "以上の数字を入力してください");
 						continue;
 					}
 					break;
