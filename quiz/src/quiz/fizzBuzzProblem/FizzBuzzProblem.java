@@ -1,4 +1,4 @@
-package quiz.fibonach;
+package quiz.fizzBuzzProblem;
 
 import java.io.BufferedReader;
 import java.io.IOException;
