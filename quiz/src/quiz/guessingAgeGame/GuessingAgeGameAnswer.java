@@ -58,17 +58,18 @@ public class GuessingAgeGameAnswer {
 
 			//ここから
 			while(true) {
-				prediction = getInt();
-				if(prediction == age) {
+				prediction = getInt();//入力
+
+				if(prediction == age) {//先に正解を判定することで質問と解答を分けている
 					System.out.println(">正解です");
 					System.out.println(String.format("%d回の質問で推測できました", count));
 					break;
 				}
 
-				System.out.println(String.format("%d歳未満ですか？", prediction));
-				count++;
+				System.out.println(String.format("%d歳未満ですか？", prediction));//質問
+				count++;//ここで質問回数を増やす
 
-				if(prediction > age) {
+				if(prediction > age) {//判定
 					System.out.println(">はい");
 				}else{
 					System.out.println(">いいえ");
