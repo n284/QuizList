@@ -70,6 +70,23 @@ public class MatrixMultiplication {
 	public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 	public static void main(String[] args) {
+		int [][] leftArray;
+		int [][] rightArray;
+		int [][] answerArray;
+
+		try{
+			leftArray = convertCSVtoArray();
+			rightArray = convertCSVtoArray();
+			answerArray = new int[ROW_NUMBER][COLUMN_NUMBER];
+
+			//ここから
+
+			//ここまで
+			printArray(answerArray);
+
+		}catch (IOException e) {
+			System.out.println("入力エラーが発生しました");
+		}
 	}
 
 	public static int[][] convertCSVtoArray() throws IOException{
